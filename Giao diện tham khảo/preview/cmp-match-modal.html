@@ -1,0 +1,68 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  body { background: var(--neutral-96); }
+  .holder { padding: 16px; display: flex; justify-content: center; }
+  .modal {
+    width: 360px;
+    background: var(--grad-sunset);
+    border-radius: 28px;
+    padding: 28px 24px 24px;
+    color: #fff;
+    text-align: center;
+    box-shadow: var(--elev-5);
+    position: relative;
+    overflow: hidden;
+  }
+  .modal::before, .modal::after {
+    content: ""; position: absolute; border-radius: 50%;
+    filter: blur(40px); opacity: .55;
+  }
+  .modal::before { width: 200px; height: 200px; background: #fff; top: -80px; right: -60px; }
+  .modal::after { width: 160px; height: 160px; background: #8b5cf6; bottom: -60px; left: -40px; }
+  .modal > * { position: relative; z-index: 1; }
+  .crown {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 36px; line-height: 1; letter-spacing: -0.02em;
+    text-shadow: 0 2px 12px rgba(0,0,0,.20);
+  }
+  .sub { font-size: 13px; font-weight: 500; opacity: .95; margin-top: 6px; }
+  .avs { display: flex; justify-content: center; gap: -16px; margin: 22px 0 18px; }
+  .av {
+    width: 116px; height: 116px; border-radius: 50%;
+    border: 5px solid #fff;
+    background: linear-gradient(180deg, #c4b5fd 0%, #d6336c 100%);
+    box-shadow: 0 8px 20px rgba(0,0,0,.20);
+    margin: 0 -14px;
+    display: flex; align-items: flex-end; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 32px;
+    padding-bottom: 12px;
+    color: rgba(255,255,255,.7);
+  }
+  .av.b { background: linear-gradient(180deg, #93c5fd 0%, #8b5cf6 100%); }
+  .actions { display: flex; gap: 10px; margin-top: 6px; }
+  .actions button {
+    flex: 1; padding: 14px; border-radius: 999px; border: none; cursor: pointer;
+    font-family: var(--font-body); font-weight: 700; font-size: 14px;
+  }
+  .send { background: #fff; color: var(--love-30); }
+  .keep { background: rgba(255,255,255,.18); color: #fff; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+</style></head>
+<body>
+<div class="holder">
+  <div class="modal">
+    <div class="crown">It's a Match!</div>
+    <div class="sub">Bạn và Đăng đã thích nhau · Gửi lời chào đầu tiên</div>
+    <div class="avs">
+      <div class="av">L</div>
+      <div class="av b">Đ</div>
+    </div>
+    <div class="actions">
+      <button class="send">Nhắn tin ngay</button>
+      <button class="keep">Để sau</button>
+    </div>
+  </div>
+</div>
+</body></html>

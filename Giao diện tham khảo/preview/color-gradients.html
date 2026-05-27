@@ -1,0 +1,37 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .grad {
+    height: 96px;
+    border-radius: 16px;
+    padding: 14px 16px;
+    color: #fff;
+    display: flex; flex-direction: column; justify-content: space-between;
+    font-weight: 600; font-size: 13px;
+    box-shadow: var(--elev-2);
+  }
+  .grad .hex { font-family: var(--font-mono); font-size: 11px; font-weight: 500; opacity: .9; }
+  .row.g { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">Gradients · brand-owned</div>
+  <div class="row g">
+    <div class="grad" style="background:var(--grad-love)">
+      <span>Love → Spark</span>
+      <span class="hex">#D6336C → #8B5CF6 · 135°</span>
+    </div>
+    <div class="grad" style="background:var(--grad-spark)">
+      <span>Spark → Campus</span>
+      <span class="hex">#8B5CF6 → #3B82F6 · 135°</span>
+    </div>
+    <div class="grad" style="background:var(--grad-campus)">
+      <span>Campus → Aqua</span>
+      <span class="hex">#3B82F6 → #06B6D4 · 135°</span>
+    </div>
+    <div class="grad" style="background:var(--grad-sunset)">
+      <span>Sunset · match modal</span>
+      <span class="hex">#FBBF24 → #D6336C → #8B5CF6</span>
+    </div>
+  </div>
+  <div class="note">Use sparingly: hero CTAs, the match modal, splash, story rings. Never on body text.</div>
+</div></body></html>

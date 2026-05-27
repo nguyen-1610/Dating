@@ -1,0 +1,67 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  .stories { display: flex; gap: 14px; padding: 8px 4px; align-items: flex-start; overflow: hidden; }
+  .story { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 0 0 auto; }
+  .ring {
+    width: 64px; height: 64px; border-radius: 50%;
+    padding: 2.5px;
+    background: var(--grad-love);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ring.seen { background: var(--outline); }
+  .ring.add { background: var(--surface-container); padding: 0; border: 2px dashed var(--outline); }
+  .av {
+    width: 100%; height: 100%; border-radius: 50%;
+    border: 2.5px solid #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 22px;
+    color: rgba(255,255,255,.8);
+  }
+  .a1 { background: linear-gradient(180deg, #c4b5fd, #d6336c); }
+  .a2 { background: linear-gradient(180deg, #93c5fd, #8b5cf6); }
+  .a3 { background: linear-gradient(180deg, #fbbf24, #d6336c); }
+  .a4 { background: linear-gradient(180deg, #06b6d4, #3b82f6); }
+  .a5 { background: linear-gradient(180deg, #34d399, #06b6d4); }
+  .ring.add .av { background: transparent; color: var(--primary); font-size: 28px; border: none; }
+  .name { font-size: 11px; font-weight: 600; color: var(--fg-2); }
+  .stat-online {
+    position: relative;
+  }
+  .stat-online::after {
+    content: ""; position: absolute; right: 2px; bottom: 2px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--success); border: 2.5px solid #fff;
+  }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">Avatars · stories · presence</div>
+  <div class="stories">
+    <div class="story">
+      <div class="ring add"><div class="av"><span style="font-family:'Material Symbols Rounded';font-size:28px;color:var(--primary)">add</span></div></div>
+      <div class="name">Của bạn</div>
+    </div>
+    <div class="story">
+      <div class="ring stat-online"><div class="av a1">L</div></div>
+      <div class="name">Linh</div>
+    </div>
+    <div class="story">
+      <div class="ring"><div class="av a2">Đ</div></div>
+      <div class="name">Đăng</div>
+    </div>
+    <div class="story">
+      <div class="ring"><div class="av a3">M</div></div>
+      <div class="name">Mai</div>
+    </div>
+    <div class="story">
+      <div class="ring seen"><div class="av a4">P</div></div>
+      <div class="name">Phúc</div>
+    </div>
+    <div class="story">
+      <div class="ring seen"><div class="av a5">T</div></div>
+      <div class="name">Thảo</div>
+    </div>
+  </div>
+</div></body></html>

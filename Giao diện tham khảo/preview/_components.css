@@ -1,0 +1,49 @@
+<!-- Reusable component styles for preview cards -->
+<style>
+  .btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all .15s var(--ease-standard);
+    height: 40px;
+  }
+  .btn.filled { background: var(--primary); color: var(--on-primary); box-shadow: 0 1px 2px rgba(244,63,140,.25); }
+  .btn.filled:hover { box-shadow: 0 4px 12px rgba(244,63,140,.35); }
+  .btn.filled.grad { background: var(--grad-love); }
+  .btn.tonal { background: var(--primary-container); color: var(--on-primary-container); }
+  .btn.tonal:hover { background: #fbd6e2; }
+  .btn.outlined { background: transparent; color: var(--primary); border: 1.5px solid var(--outline); }
+  .btn.text { background: transparent; color: var(--primary); padding: 10px 12px; }
+  .btn.disabled { background: var(--surface-container-high); color: var(--fg-4); cursor: not-allowed; box-shadow: none; }
+
+  .btn .icon { font-family: 'Material Symbols Rounded'; font-weight: 400; font-size: 18px; }
+
+  /* swipe FAB cluster */
+  .fab {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    border: none; cursor: pointer;
+    background: #fff;
+    box-shadow: var(--elev-3);
+    transition: transform .15s var(--ease-bounce);
+  }
+  .fab:hover { transform: translateY(-2px) scale(1.05); }
+  .fab.sm { width: 48px; height: 48px; }
+  .fab.lg { width: 72px; height: 72px; }
+  .fab .icon { font-family: 'Material Symbols Rounded'; font-size: 28px; font-variation-settings: 'FILL' 1, 'wght' 500; }
+  .fab.pass { color: var(--neutral-40); }
+  .fab.like { color: var(--love-60); }
+  .fab.super { color: var(--superlike); background: #fff; }
+  .fab.boost { color: var(--spark-60); }
+  .fab.rewind { color: var(--warning); }
+</style>

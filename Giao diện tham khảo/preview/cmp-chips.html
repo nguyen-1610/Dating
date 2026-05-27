@@ -1,0 +1,40 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  .chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-body); font-weight: 500; font-size: 13px;
+    padding: 8px 14px; border-radius: 999px;
+    background: var(--surface-container); color: var(--fg-1);
+    border: 1px solid var(--outline-variant);
+    cursor: pointer;
+  }
+  .chip .icon { font-family: 'Material Symbols Rounded'; font-size: 16px; }
+  .chip.selected { background: var(--primary-container); border-color: transparent; color: var(--on-primary-container); }
+  .chip.selected.spark { background: var(--secondary-container); color: var(--on-secondary-container); }
+  .chip.selected.campus { background: var(--tertiary-container); color: var(--on-tertiary-container); }
+  .chip.filter { background: var(--neutral-15); color: #fff; border-color: transparent; }
+  .row { gap: 8px; }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">Chips · interests, filters</div>
+  <div class="row wrap">
+    <span class="chip selected"><span class="icon">favorite</span>Cà phê</span>
+    <span class="chip selected spark"><span class="icon">photo_camera</span>Nhiếp ảnh</span>
+    <span class="chip selected campus"><span class="icon">menu_book</span>Đọc sách</span>
+    <span class="chip">Bóng đá</span>
+    <span class="chip">K-Pop</span>
+    <span class="chip">Phim Hàn</span>
+    <span class="chip">Du lịch</span>
+    <span class="chip">Gym</span>
+  </div>
+  <div class="row wrap" style="margin-top:4px">
+    <span class="chip filter"><span class="icon">tune</span>Bộ lọc</span>
+    <span class="chip">18 – 24</span>
+    <span class="chip">≤ 5 km</span>
+    <span class="chip">HCMUS only</span>
+    <span class="chip">Cùng năm</span>
+  </div>
+</div></body></html>

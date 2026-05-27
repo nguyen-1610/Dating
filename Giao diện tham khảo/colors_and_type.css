@@ -1,0 +1,412 @@
+/* ============================================================
+   UniDate — Colors & Type
+   Material 3 inspired tonal system with a Vietnamese-aware
+   typeface pairing.
+
+   Substitutions flagged: All fonts are Google Fonts via @import.
+   If you want self-hosted, drop .woff2 in /fonts/ and rewrite
+   @font-face declarations.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ============================================================
+     COLOR — Brand
+     ============================================================ */
+
+  /* PRIMARY · "Love" magenta-rose (dating heart, lighter / more energetic) */
+  --love-10:  #3d0014;
+  --love-20:  #5c0223;
+  --love-30:  #7e0936;
+  --love-40:  #a2154d;
+  --love-50:  #bc1f60;
+  --love-60:  #d6336c;   /* base / brand */
+  --love-70:  #e25f8b;
+  --love-80:  #ed8fae;
+  --love-90:  #f8c6d5;
+  --love-95:  #fce3eb;
+  --love-99:  #fff8fb;
+
+  /* SECONDARY · "Spark" purple (energy, fun, social) */
+  --spark-10: #1f0a4d;
+  --spark-20: #341878;
+  --spark-30: #4a279f;
+  --spark-40: #6336c6;
+  --spark-50: #7c4dee;
+  --spark-60: #8b5cf6;   /* base */
+  --spark-70: #a78bfa;
+  --spark-80: #c4b5fd;
+  --spark-90: #e0d6ff;
+  --spark-95: #f1ebff;
+  --spark-99: #fbf9ff;
+
+  /* TERTIARY · "Campus" academic blue (university, trust) */
+  --campus-10: #0a1f4d;
+  --campus-20: #122f73;
+  --campus-30: #1b40a0;
+  --campus-40: #2553cc;
+  --campus-50: #3268eb;
+  --campus-60: #3b82f6;   /* base */
+  --campus-70: #60a5fa;
+  --campus-80: #93c5fd;
+  --campus-90: #bfdbfe;
+  --campus-95: #dbeafe;
+  --campus-99: #f6faff;
+
+  /* NEUTRAL · slate-leaning gray */
+  --neutral-0:   #000000;
+  --neutral-5:   #0a0a0f;
+  --neutral-10:  #14141a;
+  --neutral-15:  #1d1d24;
+  --neutral-20:  #25252e;
+  --neutral-25:  #2f2f39;
+  --neutral-30:  #3a3a45;
+  --neutral-40:  #525261;
+  --neutral-50:  #6b6b7c;
+  --neutral-60:  #878798;
+  --neutral-70:  #a5a5b3;
+  --neutral-80:  #c5c5cf;
+  --neutral-90:  #e5e5ec;
+  --neutral-94:  #eeeef3;
+  --neutral-96:  #f4f4f7;
+  --neutral-98:  #f9f9fb;
+  --neutral-100: #ffffff;
+
+  /* SEMANTIC · status */
+  --success: #10b981;
+  --success-container: #d1fae5;
+  --warning: #f59e0b;
+  --warning-container: #fef3c7;
+  --error:   #ef4444;
+  --error-container: #fee2e2;
+  --info:    var(--campus-60);
+  --info-container: var(--campus-95);
+
+  /* SUPERLIKE · accent for super-like swipe */
+  --superlike: #00c8ff;
+  --superlike-container: #cdf3ff;
+
+  /* ============================================================
+     LIGHT THEME (default)
+     ============================================================ */
+  --primary:           var(--love-60);
+  --on-primary:        #ffffff;
+  --primary-container: var(--love-95);
+  --on-primary-container: var(--love-20);
+
+  --secondary:           var(--spark-60);
+  --on-secondary:        #ffffff;
+  --secondary-container: var(--spark-95);
+  --on-secondary-container: var(--spark-20);
+
+  --tertiary:           var(--campus-60);
+  --on-tertiary:        #ffffff;
+  --tertiary-container: var(--campus-95);
+  --on-tertiary-container: var(--campus-20);
+
+  /* Surface roles (M3 surface tints) */
+  --surface:             #ffffff;
+  --surface-dim:         #f4f4f7;
+  --surface-bright:      #ffffff;
+  --surface-container-lowest: #ffffff;
+  --surface-container-low:    #fbfbfd;
+  --surface-container:        #f4f4f7;
+  --surface-container-high:   #ededf2;
+  --surface-container-highest:#e5e5ec;
+
+  --on-surface:        #14141a;
+  --on-surface-variant:#525261;
+  --outline:           #c5c5cf;
+  --outline-variant:   #e5e5ec;
+
+  /* Foreground roles (convenience) */
+  --fg-1: #14141a;   /* strongest */
+  --fg-2: #3a3a45;
+  --fg-3: #6b6b7c;
+  --fg-4: #a5a5b3;   /* muted */
+  --fg-inverse: #ffffff;
+
+  /* Gradient: dating-card "Love" gradient (used on hero CTAs, match modal) */
+  --grad-love:   linear-gradient(135deg, #d6336c 0%, #8b5cf6 100%);
+  --grad-spark:  linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+  --grad-campus: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  --grad-sunset: linear-gradient(135deg, #fbbf24 0%, #d6336c 50%, #8b5cf6 100%);
+
+  /* ============================================================
+     ELEVATION · soft, layered shadows (M3-ish)
+     ============================================================ */
+  --elev-0: none;
+  --elev-1: 0 1px 2px 0 rgba(20, 20, 26, 0.04), 0 1px 3px 1px rgba(20, 20, 26, 0.06);
+  --elev-2: 0 1px 2px 0 rgba(20, 20, 26, 0.05), 0 2px 6px 2px rgba(20, 20, 26, 0.08);
+  --elev-3: 0 4px 8px 3px rgba(20, 20, 26, 0.08), 0 1px 3px 0 rgba(20, 20, 26, 0.06);
+  --elev-4: 0 6px 12px 6px rgba(20, 20, 26, 0.10), 0 2px 3px 0 rgba(20, 20, 26, 0.06);
+  --elev-5: 0 8px 24px 8px rgba(20, 20, 26, 0.12), 0 4px 6px 0 rgba(20, 20, 26, 0.08);
+  --elev-love: 0 12px 32px -8px rgba(214, 51, 108, 0.45), 0 4px 12px -2px rgba(139, 92, 246, 0.20);
+
+  /* ============================================================
+     RADIUS · M3 shape scale
+     ============================================================ */
+  --r-xs:   4px;
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   16px;
+  --r-xl:   24px;
+  --r-2xl:  28px;
+  --r-3xl:  32px;
+  --r-pill: 999px;
+
+  /* ============================================================
+     SPACING · 4pt grid
+     ============================================================ */
+  --s-0: 0;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-7: 32px;
+  --s-8: 40px;
+  --s-9: 48px;
+  --s-10: 64px;
+  --s-11: 80px;
+  --s-12: 96px;
+
+  /* ============================================================
+     MOTION · M3 easing + duration
+     ============================================================ */
+  --ease-standard:     cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized:   cubic-bezier(0.2, 0, 0, 1);
+  --ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --ease-bounce:       cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --d-short-1: 50ms;
+  --d-short-2: 100ms;
+  --d-short-3: 150ms;
+  --d-short-4: 200ms;
+  --d-medium-1: 250ms;
+  --d-medium-2: 300ms;
+  --d-medium-3: 350ms;
+  --d-medium-4: 400ms;
+  --d-long-1: 450ms;
+  --d-long-2: 500ms;
+
+  /* ============================================================
+     TYPOGRAPHY · font stacks
+     ============================================================ */
+  --font-display: 'Bricolage Grotesque', 'Be Vietnam Pro', system-ui, sans-serif;
+  --font-body:    'Be Vietnam Pro', 'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'Menlo', monospace;
+}
+
+/* ============================================================
+   DARK THEME
+   ============================================================ */
+[data-theme="dark"] {
+  --primary:           var(--love-70);
+  --on-primary:        var(--love-20);
+  --primary-container: var(--love-30);
+  --on-primary-container: var(--love-90);
+
+  --secondary:           var(--spark-70);
+  --on-secondary:        var(--spark-20);
+  --secondary-container: var(--spark-30);
+  --on-secondary-container: var(--spark-90);
+
+  --tertiary:           var(--campus-70);
+  --on-tertiary:        var(--campus-20);
+  --tertiary-container: var(--campus-30);
+  --on-tertiary-container: var(--campus-90);
+
+  --surface:             #0f0f14;
+  --surface-dim:         #0a0a0f;
+  --surface-bright:      #2a2a35;
+  --surface-container-lowest: #07070b;
+  --surface-container-low:    #14141a;
+  --surface-container:        #1a1a22;
+  --surface-container-high:   #25252e;
+  --surface-container-highest:#2f2f39;
+
+  --on-surface:        #ededf2;
+  --on-surface-variant:#a5a5b3;
+  --outline:           #525261;
+  --outline-variant:   #3a3a45;
+
+  --fg-1: #ededf2;
+  --fg-2: #c5c5cf;
+  --fg-3: #878798;
+  --fg-4: #525261;
+  --fg-inverse: #14141a;
+
+  --elev-1: 0 1px 2px 0 rgba(0, 0, 0, 0.30), 0 1px 3px 1px rgba(0, 0, 0, 0.20);
+  --elev-2: 0 1px 2px 0 rgba(0, 0, 0, 0.35), 0 2px 6px 2px rgba(0, 0, 0, 0.30);
+  --elev-3: 0 4px 8px 3px rgba(0, 0, 0, 0.40), 0 1px 3px 0 rgba(0, 0, 0, 0.30);
+  --elev-4: 0 6px 12px 6px rgba(0, 0, 0, 0.45), 0 2px 3px 0 rgba(0, 0, 0, 0.30);
+  --elev-5: 0 8px 24px 8px rgba(0, 0, 0, 0.50), 0 4px 6px 0 rgba(0, 0, 0, 0.35);
+  --elev-love: 0 12px 32px -8px rgba(214, 51, 108, 0.55), 0 4px 16px -2px rgba(139, 92, 246, 0.40);
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES · M3 type scale, brand-tuned
+   ============================================================ */
+
+html, body {
+  font-family: var(--font-body);
+  font-feature-settings: "ss01", "cv11";
+  color: var(--on-surface);
+  background: var(--surface);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display — Bricolage Grotesque, tight, expressive */
+.display-lg,
+.display-l {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 57px;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 96;
+}
+.display-md,
+.display-m {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 52px;
+  letter-spacing: -0.02em;
+}
+.display-sm,
+.display-s {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.015em;
+}
+
+/* Headline */
+h1, .headline-lg {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  color: var(--fg-1);
+}
+h2, .headline-md {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.005em;
+  color: var(--fg-1);
+}
+h3, .headline-sm {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--fg-1);
+}
+
+/* Title — Be Vietnam Pro, used on cards, modals, app-bar */
+h4, .title-lg {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--fg-1);
+}
+h5, .title-md {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  color: var(--fg-1);
+}
+h6, .title-sm {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: var(--fg-1);
+}
+
+/* Body */
+p, .body-lg {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--fg-2);
+}
+.body-md {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--fg-2);
+}
+.body-sm {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--fg-3);
+}
+
+/* Label — buttons, chips, micro-copy */
+.label-lg {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: var(--fg-1);
+}
+.label-md {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: var(--fg-1);
+}
+.label-sm {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+code, kbd, samp, .mono {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+/* Material-y state layer helper: drop on any clickable surface */
+.state-layer {
+  position: relative;
+  isolation: isolate;
+}
+.state-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity var(--d-short-2) var(--ease-standard);
+  border-radius: inherit;
+}
+.state-layer:hover::after { opacity: 0.08; }
+.state-layer:active::after { opacity: 0.12; }

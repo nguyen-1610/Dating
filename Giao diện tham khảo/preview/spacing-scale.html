@@ -1,0 +1,23 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; align-items: end; }
+  .col-s { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .bar { background: var(--primary-container); border: 1px solid var(--primary); border-radius: 4px; width: 100%; }
+  .num { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); font-weight: 600; }
+  .tok { font-family: var(--font-mono); font-size: 10px; color: var(--fg-2); font-weight: 600; }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">Spacing · 4pt grid</div>
+  <div class="grid">
+    <div class="col-s"><div class="bar" style="height:4px"></div><span class="tok">s-1</span><span class="num">4</span></div>
+    <div class="col-s"><div class="bar" style="height:8px"></div><span class="tok">s-2</span><span class="num">8</span></div>
+    <div class="col-s"><div class="bar" style="height:12px"></div><span class="tok">s-3</span><span class="num">12</span></div>
+    <div class="col-s"><div class="bar" style="height:16px"></div><span class="tok">s-4</span><span class="num">16</span></div>
+    <div class="col-s"><div class="bar" style="height:24px"></div><span class="tok">s-6</span><span class="num">24</span></div>
+    <div class="col-s"><div class="bar" style="height:32px"></div><span class="tok">s-7</span><span class="num">32</span></div>
+    <div class="col-s"><div class="bar" style="height:48px"></div><span class="tok">s-9</span><span class="num">48</span></div>
+    <div class="col-s"><div class="bar" style="height:64px"></div><span class="tok">s-10</span><span class="num">64</span></div>
+  </div>
+  <div class="note">Card padding: 16 (mobile) / 24 (modal). Section gap: 24. Screen edge: 16 mobile · 24 tablet · 32 desktop.</div>
+</div></body></html>

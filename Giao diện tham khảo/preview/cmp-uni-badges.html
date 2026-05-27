@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  .uni {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px 4px 6px;
+    border-radius: 999px;
+    font-family: var(--font-body); font-weight: 700; font-size: 12px;
+    letter-spacing: 0.02em;
+    background: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+  }
+  .uni .glyph {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--tertiary); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 800; letter-spacing: 0;
+  }
+  .uni.lg { padding: 6px 14px 6px 8px; font-size: 13px; }
+  .uni.lg .glyph { width: 26px; height: 26px; font-size: 11px; }
+  .uni.verify { background: var(--success-container); color: #065f46; }
+  .uni.verify .glyph { background: var(--success); }
+  .uni.verify .icon { font-family: 'Material Symbols Rounded'; font-size: 14px; color: #fff; }
+  .row.wrap { gap: 8px; }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">University badges</div>
+  <div class="row wrap">
+    <span class="uni lg"><span class="glyph">HCMUS</span>Khoa học Tự nhiên</span>
+    <span class="uni lg"><span class="glyph">BK</span>Bách Khoa</span>
+    <span class="uni lg"><span class="glyph">UEH</span>Kinh tế</span>
+  </div>
+  <div class="row wrap">
+    <span class="uni"><span class="glyph">FTU</span>Ngoại Thương</span>
+    <span class="uni"><span class="glyph">RMIT</span>RMIT</span>
+    <span class="uni"><span class="glyph">USSH</span>KHXH&NV</span>
+    <span class="uni"><span class="glyph">UEL</span>Kinh tế Luật</span>
+    <span class="uni verify"><span class="glyph"><span class="icon">verified</span></span>.edu.vn verified</span>
+  </div>
+  <div class="note">Every profile card carries one. Verified pill uses success palette, not Campus.</div>
+</div></body></html>

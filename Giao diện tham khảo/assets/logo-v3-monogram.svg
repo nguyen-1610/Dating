@@ -1,0 +1,21 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="udv3g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D6336C"></stop>
+      <stop offset="100%" stop-color="#8B5CF6"></stop>
+    </linearGradient>
+    
+    <mask id="udv3mask">
+      <rect width="64" height="64" fill="#fff"></rect>
+      
+      <path d="M 16 18 L 16 38 A 8 8 0 0 0 32 38 L 32 18" stroke="#000" stroke-width="6.5" stroke-linecap="round" fill="none"></path>
+      
+      <path d="M 30 18 L 30 50 L 40 50 A 13 13 0 0 0 40 24 L 30 24" stroke="#000" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+      
+      <path d="M 14 50 C 13.5 49.7, 13 49.3, 12.7 48.9 C 11.8 47.8, 10 46.1, 10 44.3 C 10 43.2, 10.8 42.5, 11.8 42.5 C 12.6 42.5, 13.5 43, 14 43.7 C 14.5 43, 15.4 42.5, 16.2 42.5 C 17.2 42.5, 18 43.2, 18 44.3 C 18 46.1, 16.2 47.8, 15.3 48.9 C 15 49.3, 14.5 49.7, 14 50 Z" fill="#000"></path>
+    </mask>
+  </defs>
+
+  <rect width="64" height="64" rx="18" fill="url(#udv3g)" mask="url(#udv3mask)"></rect>
+</svg>

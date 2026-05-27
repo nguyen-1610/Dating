@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>UniDate · Mobile UI Kit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../colors_and_type.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,300..700,0..1&display=block">
+  <style>
+    .material-symbols-rounded, .msr {
+      font-family: 'Material Symbols Rounded' !important;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      font-feature-settings: 'liga';
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+  </style>
+  <style>
+    html, body { margin: 0; padding: 0; min-height: 100vh; }
+    body {
+      font-family: var(--font-body);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(214, 51, 108,0.10), transparent 50%),
+        radial-gradient(circle at 85% 90%, rgba(139,92,246,0.10), transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(59,130,246,0.06), transparent 60%),
+        var(--surface-dim);
+      min-height: 100vh;
+      padding: 32px 24px;
+      box-sizing: border-box;
+    }
+    .stage {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .panel {
+      background: var(--surface);
+      border-radius: 24px;
+      padding: 22px 22px 24px;
+      box-shadow: var(--elev-1);
+      border: 1px solid var(--outline-variant);
+      position: sticky; top: 24px;
+    }
+    .panel h2 {
+      margin: 0 0 4px;
+      font-family: var(--font-display);
+      font-size: 22px; font-weight: 800; letter-spacing: -0.02em;
+      background: var(--grad-love);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+    }
+    .panel .sub { font-size: 12px; color: var(--fg-3); margin-bottom: 18px; }
+    .nav-list { display: flex; flex-direction: column; gap: 4px; }
+    .nav-btn {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px; border-radius: 12px;
+      border: none; background: transparent;
+      color: var(--fg-2); font-family: var(--font-body);
+      font-size: 14px; font-weight: 600;
+      cursor: pointer; text-align: left;
+      transition: all 150ms;
+    }
+    .nav-btn:hover { background: var(--surface-container); }
+    .nav-btn.active { background: var(--primary-container); color: var(--on-primary-container); }
+    .nav-btn .num { font-size: 11px; color: var(--fg-4); font-weight: 700; min-width: 18px; }
+    .nav-btn.active .num { color: var(--primary); }
+
+    .theme-toggle {
+      margin-top: 20px;
+      display: flex;
+      background: var(--surface-container);
+      padding: 4px; border-radius: 999px;
+    }
+    .theme-toggle button {
+      flex: 1; padding: 8px 4px; border: none;
+      background: transparent;
+      font-family: var(--font-body); font-size: 12px; font-weight: 600;
+      color: var(--fg-3); cursor: pointer;
+      border-radius: 999px;
+      display: flex; align-items: center; justify-content: center; gap: 5px;
+    }
+    .theme-toggle button.active {
+      background: var(--surface); color: var(--fg-1);
+      box-shadow: var(--elev-1);
+    }
+
+    .frame-host {
+      display: flex; justify-content: center;
+      padding: 8px;
+    }
+
+    .meta {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--outline-variant);
+      font-size: 11px; color: var(--fg-3);
+      line-height: 1.5;
+    }
+    .meta a { color: var(--primary); text-decoration: none; font-weight: 600; }
+  </style>
+
+  <!-- React + Babel -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="ios-frame.jsx"></script>
+  <script type="text/babel" src="components.jsx"></script>
+  <script type="text/babel" src="screens/Discover.jsx"></script>
+  <script type="text/babel" src="screens/MatchModal.jsx"></script>
+  <script type="text/babel" src="screens/Chat.jsx"></script>
+  <script type="text/babel" src="screens/Matches.jsx"></script>
+  <script type="text/babel" src="screens/Feed.jsx"></script>
+  <script type="text/babel" src="screens/Events.jsx"></script>
+  <script type="text/babel" src="screens/Profile.jsx"></script>
+  <script type="text/babel" src="screens/Onboarding.jsx"></script>
+  <script type="text/babel" src="screens/Notifications.jsx"></script>
+  <script type="text/babel" src="screens/FilterSheet.jsx"></script>
+  <script type="text/babel" src="screens/EmptyStates.jsx"></script>
+  <script type="text/babel" src="screens/Settings.jsx"></script>
+  <script type="text/babel" src="screens/StoryViewer.jsx"></script>
+  <script type="text/babel" src="screens/ProfileEdit.jsx"></script>
+  <script type="text/babel" src="screens/OnboardingSplash.jsx"></script>
+  <script type="text/babel" src="screens/BoostSheet.jsx"></script>
+
+  <script type="text/babel" data-presets="react">
+    const SCREENS = [
+      { id: 'splash',      label: 'Splash · intro',  tab: null, sectionStart: 'Onboarding' },
+      { id: 'onboarding',  label: 'Onboarding · 5 steps', tab: null },
+      { id: 'discover',    label: 'Discover',        tab: 'discover', sectionStart: 'Core flow' },
+      { id: 'matches',     label: 'Matches list',    tab: 'matches' },
+      { id: 'chat',        label: 'Chat',            tab: 'matches' },
+      { id: 'feed',        label: 'Social feed',     tab: 'feed' },
+      { id: 'events',      label: 'Events list',     tab: 'events' },
+      { id: 'eventDetail', label: 'Event detail',    tab: 'events' },
+      { id: 'profile',     label: 'Profile',         tab: 'profile' },
+      { id: 'profileEdit', label: 'Profile edit',    tab: null },
+      { id: 'settings',    label: 'Settings',        tab: null },
+      { id: 'notifications', label: 'Notifications', tab: null },
+      { id: 'story',       label: 'Story viewer',    tab: null },
+      { id: 'empty-profiles', label: 'Empty · no profiles', tab: null, sectionStart: 'Empty states' },
+      { id: 'empty-matches',  label: 'Empty · no matches',  tab: null },
+      { id: 'empty-messages', label: 'Empty · no messages', tab: null },
+    ];
+
+    function App() {
+      const [screen, setScreen] = React.useState('discover');
+      const [theme, setTheme] = React.useState('light');
+      const [matchProfile, setMatchProfile] = React.useState(null);
+      const [filterOpen, setFilterOpen] = React.useState(false);
+      const [boostOpen, setBoostOpen] = React.useState(false);
+
+      React.useEffect(() => {
+        document.documentElement.dataset.theme = theme;
+      }, [theme]);
+
+      const current = SCREENS.find(s => s.id === screen);
+      const activeTab = current?.tab;
+
+      const renderScreen = () => {
+        switch (screen) {
+          case 'splash':   return <OnboardingSplash onContinue={() => setScreen('onboarding')} onSignIn={() => setScreen('discover')}/>;
+          case 'discover': return <DiscoverScreen onMatch={p => setMatchProfile(p)} onOpenFilter={() => setFilterOpen(true)} onOpenBoost={() => setBoostOpen(true)}/>;
+          case 'matches':  return <MatchesScreen onOpenChat={() => setScreen('chat')}/>;
+          case 'chat':     return <ChatScreen onBack={() => setScreen('matches')}/>;
+          case 'feed':     return <FeedScreen/>;
+          case 'events':   return <EventListScreen onOpen={() => setScreen('eventDetail')}/>;
+          case 'eventDetail': return <EventDetailScreen onBack={() => setScreen('events')}/>;
+          case 'profile':  return <ProfileScreen/>;
+          case 'profileEdit': return <ProfileEditScreen onBack={() => setScreen('profile')} onSave={() => setScreen('profile')}/>;
+          case 'settings': return <SettingsScreen onBack={() => setScreen('profile')} theme={theme} onToggleTheme={() => setTheme(theme === 'light' ? 'dark' : 'light')}/>;
+          case 'onboarding': return <OnboardingScreen onDone={() => setScreen('discover')}/>;
+          case 'notifications': return <NotificationsScreen onBack={() => setScreen('discover')}/>;
+          case 'story':    return <StoryViewer onClose={() => setScreen('feed')}/>;
+          case 'empty-profiles': return <EmptyState kind="no-profiles"/>;
+          case 'empty-matches':  return <EmptyState kind="no-matches"/>;
+          case 'empty-messages': return <EmptyState kind="no-messages"/>;
+          default: return null;
+        }
+      };
+
+      const showBottomNav = screen !== 'onboarding'
+        && screen !== 'splash'
+        && screen !== 'chat'
+        && screen !== 'eventDetail'
+        && screen !== 'notifications'
+        && screen !== 'story'
+        && screen !== 'profileEdit'
+        && screen !== 'settings';
+
+      return (
+        <div className="stage">
+          <aside className="panel">
+            <h2>UniDate Kit</h2>
+            <div className="sub">Click-thru prototype · 390 × 844</div>
+            <div className="nav-list">
+              {SCREENS.map((s, i) => (
+                <React.Fragment key={s.id}>
+                  {s.sectionStart && (
+                    <div style={{
+                      fontSize: 10, fontWeight: 700, color: 'var(--fg-4)',
+                      letterSpacing: '0.08em', textTransform: 'uppercase',
+                      padding: '10px 12px 4px',
+                    }}>{s.sectionStart}</div>
+                  )}
+                  <button
+                    className={'nav-btn' + (screen === s.id ? ' active' : '')}
+                    onClick={() => setScreen(s.id)}>
+                    <span className="num">{String(i + 1).padStart(2, '0')}</span>
+                    {s.label}
+                  </button>
+                </React.Fragment>
+              ))}
+            </div>
+            <div className="theme-toggle">
+              <button className={theme === 'light' ? 'active' : ''} onClick={() => setTheme('light')}>
+                <Icon name="light_mode" size={14}/> Light
+              </button>
+              <button className={theme === 'dark' ? 'active' : ''} onClick={() => setTheme('dark')}>
+                <Icon name="dark_mode" size={14}/> Dark
+              </button>
+            </div>
+            <div style={{
+              marginTop: 14,
+              padding: '10px 12px',
+              background: 'var(--surface-container-low)',
+              border: '1px solid var(--outline-variant)',
+              borderRadius: 12,
+              fontSize: 11, fontWeight: 600, color: 'var(--fg-2)',
+              lineHeight: 1.4,
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
+                <Icon name="tune" size={14} color="var(--primary)"/>
+                <span style={{ fontWeight: 700, color: 'var(--fg-1)' }}>Try the filter sheet</span>
+              </div>
+              From Discover, tap the <strong>tune</strong> icon in the top-left.
+            </div>
+            <div className="meta">
+              Components live in <code>components.jsx</code>.<br/>
+              Each screen is its own file under <code>screens/</code>.<br/>
+              Powered by <code>colors_and_type.css</code>.
+            </div>
+          </aside>
+
+          <div className="frame-host">
+            <IOSDevice width={390} height={844} dark={theme === 'dark'}>
+              <div data-screen-label={current?.label} style={{
+                position: 'relative', width: '100%', height: '100%',
+                background: 'var(--surface)',
+                overflow: 'hidden',
+              }}>
+                {renderScreen()}
+                {showBottomNav && (
+                  <BottomNav
+                    active={activeTab || 'discover'}
+                    badges={{ matches: true }}
+                    onChange={(tab) => {
+                      const s = SCREENS.find(x => x.tab === tab && x.id !== 'chat' && x.id !== 'eventDetail');
+                      if (s) setScreen(s.id);
+                    }}/>
+                )}
+                {matchProfile && (
+                  <MatchModal profile={matchProfile}
+                    onMessage={() => { setMatchProfile(null); setScreen('chat'); }}
+                    onDismiss={() => setMatchProfile(null)}/>
+                )}
+                <FilterSheet open={filterOpen}
+                  onClose={() => setFilterOpen(false)}
+                  onApply={() => setFilterOpen(false)}/>
+                <BoostSheet open={boostOpen}
+                  onClose={() => setBoostOpen(false)}/>
+              </div>
+            </IOSDevice>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>

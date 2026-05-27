@@ -1,0 +1,48 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  .pane { padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+  .pane.l { background: #ffffff; }
+  .pane.d { background: #0f0f14; color: #ededf2; }
+  .roles { display: flex; flex-direction: column; gap: 6px; }
+  .r {
+    display: flex; align-items: center; gap: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: var(--font-mono);
+  }
+  .r .swatch-dot { width: 18px; height: 18px; border-radius: 5px; border: 1px solid rgba(0,0,0,.08); }
+  .pane.d .r .swatch-dot { border-color: rgba(255,255,255,.12); }
+  .pane .head { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+</style></head>
+<body><div class="card" style="padding:0">
+  <div class="split">
+    <div class="pane l">
+      <div class="head">Light</div>
+      <div class="roles">
+        <div class="r"><span class="swatch-dot" style="background:#ffffff"></span> surface · #FFFFFF</div>
+        <div class="r"><span class="swatch-dot" style="background:#fbfbfd"></span> container-low · #FBFBFD</div>
+        <div class="r"><span class="swatch-dot" style="background:#f4f4f7"></span> container · #F4F4F7</div>
+        <div class="r"><span class="swatch-dot" style="background:#ededf2"></span> container-high · #EDEDF2</div>
+        <div class="r"><span class="swatch-dot" style="background:#e5e5ec"></span> container-highest · #E5E5EC</div>
+        <div class="r"><span class="swatch-dot" style="background:#14141a"></span> on-surface · #14141A</div>
+        <div class="r"><span class="swatch-dot" style="background:#525261"></span> on-surface-var · #525261</div>
+        <div class="r"><span class="swatch-dot" style="background:#c5c5cf"></span> outline · #C5C5CF</div>
+      </div>
+    </div>
+    <div class="pane d">
+      <div class="head">Dark</div>
+      <div class="roles">
+        <div class="r"><span class="swatch-dot" style="background:#0f0f14"></span> surface · #0F0F14</div>
+        <div class="r"><span class="swatch-dot" style="background:#14141a"></span> container-low · #14141A</div>
+        <div class="r"><span class="swatch-dot" style="background:#1a1a22"></span> container · #1A1A22</div>
+        <div class="r"><span class="swatch-dot" style="background:#25252e"></span> container-high · #25252E</div>
+        <div class="r"><span class="swatch-dot" style="background:#2f2f39"></span> container-highest · #2F2F39</div>
+        <div class="r"><span class="swatch-dot" style="background:#ededf2"></span> on-surface · #EDEDF2</div>
+        <div class="r"><span class="swatch-dot" style="background:#a5a5b3"></span> on-surface-var · #A5A5B3</div>
+        <div class="r"><span class="swatch-dot" style="background:#525261"></span> outline · #525261</div>
+      </div>
+    </div>
+  </div>
+</div></body></html>

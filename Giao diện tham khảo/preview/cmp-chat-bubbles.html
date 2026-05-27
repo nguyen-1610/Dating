@@ -1,0 +1,74 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  .bubble-row { display: flex; gap: 6px; align-items: flex-end; }
+  .bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+    font-family: var(--font-body);
+    font-size: 14px; line-height: 20px;
+    border-radius: 20px;
+  }
+  .from-me {
+    background: var(--grad-love);
+    color: #fff;
+    border-bottom-right-radius: 6px;
+    margin-left: auto;
+    box-shadow: 0 4px 10px rgba(214, 51, 108,.20);
+  }
+  .from-them {
+    background: var(--surface-container);
+    color: var(--fg-1);
+    border-bottom-left-radius: 6px;
+  }
+  .from-them.first { border-top-left-radius: 6px; } /* stacked */
+  .av {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(180deg, #c4b5fd, #d6336c);
+    color: #fff; font-weight: 700; font-size: 12px;
+    display: flex; align-items: center; justify-content: center;
+    flex: 0 0 28px;
+  }
+  .meta { font-size: 10px; color: var(--fg-3); font-weight: 600; padding: 0 8px; }
+  .col { gap: 4px; }
+  .typing {
+    background: var(--surface-container);
+    width: 56px; padding: 12px 14px;
+    border-radius: 20px;
+    border-bottom-left-radius: 6px;
+    display: flex; gap: 4px;
+  }
+  .dot {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--fg-3);
+    animation: bob 1.2s infinite ease-in-out;
+  }
+  .dot:nth-child(2) { animation-delay: .2s; }
+  .dot:nth-child(3) { animation-delay: .4s; }
+  @keyframes bob { 0%,100%{opacity:.3;transform:translateY(0)} 50%{opacity:1;transform:translateY(-3px)} }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">Chat bubbles</div>
+  <div class="col">
+    <div class="bubble-row">
+      <div class="av">L</div>
+      <div class="bubble from-them first">Hi Đăng, mình thấy bạn cũng học BK á 👋</div>
+    </div>
+    <div class="bubble-row">
+      <div style="width:28px"></div>
+      <div class="bubble from-them">Bạn học khoa gì vậy?</div>
+    </div>
+    <div class="bubble-row">
+      <div class="bubble from-me">Hi Linh! Mình học Cơ điện tử, năm 4 rồi</div>
+    </div>
+    <div class="bubble-row">
+      <div class="bubble from-me">Cuối tuần này có rảnh đi cà phê không?</div>
+    </div>
+    <div class="meta" style="text-align:right">Đã xem · 2 phút trước</div>
+    <div class="bubble-row" style="margin-top:6px">
+      <div class="av">L</div>
+      <div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+    </div>
+  </div>
+</div></body></html>

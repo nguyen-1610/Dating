@@ -1,0 +1,164 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,300..700,0..1&display=block">
+<style>
+  .msr {
+    font-family: 'Material Symbols Rounded' !important;
+    line-height: 1; display: inline-block;
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+  }
+  html, body { margin: 0; padding: 0; width: 700px; }
+  body { background: var(--surface); font-family: var(--font-body); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; padding: 14px; }
+  .es {
+    aspect-ratio: 5 / 6;
+    border-radius: 18px;
+    border: 1px solid var(--outline-variant);
+    padding: 18px 14px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    background: var(--surface);
+  }
+  .es.dark { background: var(--neutral-10); border-color: var(--neutral-25); }
+  .es.dark .t { color: var(--neutral-90); }
+  .es.dark .s { color: var(--neutral-70); }
+  .art { width: 96px; height: 80px; margin-bottom: 12px; }
+  .t {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 14px; letter-spacing: -0.01em;
+    color: var(--fg-1); line-height: 1.15;
+  }
+  .s {
+    font-size: 10.5px; color: var(--fg-3);
+    line-height: 1.35; margin-top: 4px;
+    max-width: 160px;
+  }
+  .lbl {
+    position: absolute; top: 8px; right: 10px;
+    font-size: 9px; font-weight: 700;
+    color: var(--fg-4);
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .es { position: relative; }
+  .cta {
+    margin-top: 10px;
+    padding: 6px 14px; border-radius: 999px;
+    background: linear-gradient(135deg, #d6336c 0%, #8b5cf6 100%);
+    color: #fff; font-size: 10px; font-weight: 700;
+  }
+</style></head>
+<body>
+  <div class="grid">
+    <!-- No profiles -->
+    <div class="es">
+      <span class="lbl">L</span>
+      <svg class="art" viewBox="0 0 140 120" fill="none">
+        <ellipse cx="70" cy="60" rx="62" ry="50" fill="url(#a1)"/>
+        <defs>
+          <linearGradient id="a1" x1="0" y1="0" x2="140" y2="120">
+            <stop offset="0%" stop-color="#d6336c" stop-opacity=".15"/>
+            <stop offset="100%" stop-color="#8b5cf6" stop-opacity=".15"/>
+          </linearGradient>
+          <linearGradient id="a2" x1="0" y1="0" x2="60" y2="40">
+            <stop offset="0%" stop-color="#d6336c"/><stop offset="100%" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+        <path d="M 20 90 Q 50 30, 110 50" stroke="var(--outline)" stroke-width="2" stroke-dasharray="3 5" fill="none" stroke-linecap="round"/>
+        <g transform="translate(75, 32) rotate(20)"><path d="M 0 0 L 44 14 L 14 18 L 0 0 Z" fill="url(#a2)"/></g>
+      </svg>
+      <div class="t">Hết người rồi 😅</div>
+      <div class="s">Mở rộng bộ lọc hoặc quay lại sau 12 giờ nữa.</div>
+      <div class="cta">Mở rộng khoảng cách</div>
+    </div>
+    <!-- No matches -->
+    <div class="es">
+      <span class="lbl">L</span>
+      <svg class="art" viewBox="0 0 140 120" fill="none">
+        <defs>
+          <linearGradient id="b1" x1="0" y1="0" x2="140" y2="120">
+            <stop offset="0%" stop-color="#d6336c" stop-opacity=".15"/>
+            <stop offset="100%" stop-color="#8b5cf6" stop-opacity=".15"/>
+          </linearGradient>
+          <linearGradient id="b2" x1="0" y1="0" x2="60" y2="60">
+            <stop offset="0%" stop-color="#d6336c"/><stop offset="100%" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="70" cy="60" rx="62" ry="50" fill="url(#b1)"/>
+        <path d="M 70 90 C 67 90, 65 88, 63 86 C 56 80, 42 70, 42 56 C 42 49, 47 44, 53 44 C 58 44, 63 47, 70 53 C 77 47, 82 44, 87 44 C 93 44, 98 49, 98 56 C 98 70, 84 80, 77 86 C 75 88, 73 90, 70 90 Z" fill="url(#b2)"/>
+      </svg>
+      <div class="t">Chưa có match nào</div>
+      <div class="s">Profile rõ ràng được match nhiều hơn 3 lần.</div>
+      <div class="cta">Tiếp tục khám phá</div>
+    </div>
+    <!-- No messages -->
+    <div class="es">
+      <span class="lbl">L</span>
+      <svg class="art" viewBox="0 0 140 120" fill="none">
+        <defs>
+          <linearGradient id="c1" x1="0" y1="0" x2="140" y2="120">
+            <stop offset="0%" stop-color="#d6336c" stop-opacity=".15"/>
+            <stop offset="100%" stop-color="#8b5cf6" stop-opacity=".15"/>
+          </linearGradient>
+          <linearGradient id="c2" x1="0" y1="0" x2="80" y2="40">
+            <stop offset="0%" stop-color="#d6336c"/><stop offset="100%" stop-color="#8b5cf6"/>
+          </linearGradient>
+        </defs>
+        <ellipse cx="70" cy="60" rx="62" ry="50" fill="url(#c1)"/>
+        <path d="M 30 36 a 14 14 0 0 1 14 -14 l 24 0 a 14 14 0 0 1 14 14 l 0 14 a 14 14 0 0 1 -14 14 l -14 0 l -10 8 l 0 -8 a 14 14 0 0 1 -14 -14 z" fill="var(--surface-container)" stroke="var(--outline-variant)" stroke-width="1.5"/>
+        <circle cx="46" cy="43" r="3" fill="var(--fg-3)"/><circle cx="56" cy="43" r="3" fill="var(--fg-3)"/><circle cx="66" cy="43" r="3" fill="var(--fg-3)"/>
+        <path d="M 60 80 a 14 14 0 0 1 14 -14 l 28 0 a 14 14 0 0 1 14 14 l 0 12 a 14 14 0 0 1 -14 14 l -22 0 l -10 8 l 0 -8 l 4 0 a 14 14 0 0 1 -14 -14 z" transform="translate(-2, -4)" fill="url(#c2)"/>
+      </svg>
+      <div class="t">Chưa có tin nhắn</div>
+      <div class="s">Hãy là người gửi lời chào đầu tiên.</div>
+      <div class="cta">Xem match mới</div>
+    </div>
+
+    <!-- Dark variants -->
+    <div class="es dark">
+      <span class="lbl">D</span>
+      <svg class="art" viewBox="0 0 140 120" fill="none">
+        <ellipse cx="70" cy="60" rx="62" ry="50" fill="url(#d1)"/>
+        <defs><linearGradient id="d1" x1="0" y1="0" x2="140" y2="120">
+            <stop offset="0%" stop-color="#d6336c" stop-opacity=".25"/>
+            <stop offset="100%" stop-color="#8b5cf6" stop-opacity=".25"/>
+        </linearGradient></defs>
+        <path d="M 20 90 Q 50 30, 110 50" stroke="#525261" stroke-width="2" stroke-dasharray="3 5" fill="none" stroke-linecap="round"/>
+        <g transform="translate(75, 32) rotate(20)"><path d="M 0 0 L 44 14 L 14 18 L 0 0 Z" fill="url(#a2)"/></g>
+      </svg>
+      <div class="t">Hết người rồi 😅</div>
+      <div class="s">Mở rộng bộ lọc hoặc quay lại sau 12 giờ nữa.</div>
+      <div class="cta">Mở rộng khoảng cách</div>
+    </div>
+    <div class="es dark">
+      <span class="lbl">D</span>
+      <svg class="art" viewBox="0 0 140 120" fill="none">
+        <defs><linearGradient id="e1" x1="0" y1="0" x2="140" y2="120">
+          <stop offset="0%" stop-color="#d6336c" stop-opacity=".25"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity=".25"/>
+        </linearGradient></defs>
+        <ellipse cx="70" cy="60" rx="62" ry="50" fill="url(#e1)"/>
+        <path d="M 70 90 C 67 90, 65 88, 63 86 C 56 80, 42 70, 42 56 C 42 49, 47 44, 53 44 C 58 44, 63 47, 70 53 C 77 47, 82 44, 87 44 C 93 44, 98 49, 98 56 C 98 70, 84 80, 77 86 C 75 88, 73 90, 70 90 Z" fill="url(#b2)"/>
+      </svg>
+      <div class="t">Chưa có match nào</div>
+      <div class="s">Profile rõ ràng được match nhiều hơn 3 lần.</div>
+      <div class="cta">Tiếp tục khám phá</div>
+    </div>
+    <div class="es dark">
+      <span class="lbl">D</span>
+      <svg class="art" viewBox="0 0 140 120" fill="none">
+        <defs><linearGradient id="f1" x1="0" y1="0" x2="140" y2="120">
+          <stop offset="0%" stop-color="#d6336c" stop-opacity=".25"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity=".25"/>
+        </linearGradient></defs>
+        <ellipse cx="70" cy="60" rx="62" ry="50" fill="url(#f1)"/>
+        <path d="M 30 36 a 14 14 0 0 1 14 -14 l 24 0 a 14 14 0 0 1 14 14 l 0 14 a 14 14 0 0 1 -14 14 l -14 0 l -10 8 l 0 -8 a 14 14 0 0 1 -14 -14 z" fill="#25252e" stroke="#3a3a45" stroke-width="1.5"/>
+        <circle cx="46" cy="43" r="3" fill="#a5a5b3"/><circle cx="56" cy="43" r="3" fill="#a5a5b3"/><circle cx="66" cy="43" r="3" fill="#a5a5b3"/>
+        <path d="M 60 80 a 14 14 0 0 1 14 -14 l 28 0 a 14 14 0 0 1 14 14 l 0 12 a 14 14 0 0 1 -14 14 l -22 0 l -10 8 l 0 -8 l 4 0 a 14 14 0 0 1 -14 -14 z" transform="translate(-2, -4)" fill="url(#c2)"/>
+      </svg>
+      <div class="t">Chưa có tin nhắn</div>
+      <div class="s">Hãy là người gửi lời chào đầu tiên.</div>
+      <div class="cta">Xem match mới</div>
+    </div>
+  </div>
+</body></html>

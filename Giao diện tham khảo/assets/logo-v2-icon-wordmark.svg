@@ -1,0 +1,25 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" fill="none">
+  <defs>
+    <linearGradient id="udv2g" x1="4" y1="6" x2="60" y2="66" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d6336c"></stop>
+      <stop offset="100%" stop-color="#8b5cf6"></stop>
+    </linearGradient>
+  </defs>
+
+  
+  <g transform="translate(4, 4)">
+
+    
+    <circle cx="32" cy="9" r="2.6" fill="url(#udv2g)"></circle>
+
+    
+    <path d="M 32 11&#xA;             L 56 18&#xA;             L 32 25&#xA;             L 8 18 Z" fill="url(#udv2g)"></path>
+
+    
+    <path d="M 32 60&#xA;             C 30 60, 28.5 59, 27 57.7&#xA;             C 21 52, 12 44, 12 34&#xA;             C 12 28.5, 16 25, 20.5 25&#xA;             C 24.5 25, 28.5 27.5, 32 31&#xA;             C 35.5 27.5, 39.5 25, 43.5 25&#xA;             C 48 25, 52 28.5, 52 34&#xA;             C 52 44, 43 52, 37 57.7&#xA;             C 35.5 59, 34 60, 32 60 Z" fill="url(#udv2g)"></path>
+  </g>
+
+  
+  <text x="80" y="48" font-family="&#39;Bricolage Grotesque&#39;, system-ui, sans-serif" font-weight="800" font-size="40" letter-spacing="-0.03em" fill="#14141a">UniDate</text>
+</svg>

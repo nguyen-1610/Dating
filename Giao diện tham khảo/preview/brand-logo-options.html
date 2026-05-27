@@ -1,0 +1,59 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { background: var(--surface); }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 18px;
+  }
+  .opt {
+    border-radius: 16px;
+    background: var(--surface-container-low);
+    border: 1px solid var(--outline-variant);
+    padding: 22px 16px 12px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: flex-start;
+    gap: 12px;
+    min-height: 180px;
+  }
+  .opt .main { height: 56px; display:flex; align-items:center; }
+  .opt .main img { max-width: 100%; max-height: 100%; }
+  .sizes { display: flex; gap: 14px; align-items: center; padding-top: 6px; border-top: 1px dashed var(--outline-variant); width: 100%; justify-content: center; }
+  .sizes img { display: block; }
+  .lbl {
+    font-size: 11px; font-weight: 700; color: var(--fg-3);
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+  .pickme {
+    margin-left: 6px;
+    padding: 2px 8px; border-radius: 999px;
+    background: var(--success-container); color: #065f46;
+    font-size: 9px; font-weight: 800;
+    letter-spacing: 0.06em;
+  }
+</style></head>
+<body>
+  <div class="grid">
+    <div class="opt">
+      <div class="main"><img src="../assets/logo-v1-wordmark.svg" alt="Wordmark only"></div>
+      <div class="sizes" style="height:48px"></div>
+      <div class="lbl">v1 · Wordmark</div>
+    </div>
+    <div class="opt" style="border-color: var(--success); box-shadow: 0 0 0 2px var(--success-container);">
+      <div class="main"><img src="../assets/logo-v2-icon-wordmark.svg" alt="Icon + wordmark"></div>
+      <div class="sizes">
+        <img src="../assets/logo-mark.svg" width="48" height="48" alt="48px">
+        <img src="../assets/logo-mark.svg" width="32" height="32" alt="32px">
+        <img src="../assets/logo-mark.svg" width="20" height="20" alt="20px">
+      </div>
+      <div class="lbl">v2 · Icon + wordmark <span class="pickme">PICKED</span></div>
+    </div>
+    <div class="opt">
+      <div class="main"><img src="../assets/logo-v3-monogram.svg" style="height:48px;width:48px" alt="UD monogram"></div>
+      <div class="sizes" style="height:48px"></div>
+      <div class="lbl">v3 · UD monogram</div>
+    </div>
+  </div>
+</body></html>

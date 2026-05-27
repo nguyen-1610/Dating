@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_card.css">
+<style>
+  body { background: var(--surface-container); }
+  .row-e { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 8px; }
+  .box {
+    background: #fff;
+    border-radius: 16px;
+    aspect-ratio: 4 / 3;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 4px;
+  }
+  .box .tok { font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--fg-1); }
+  .box .desc { font-size: 11px; color: var(--fg-3); font-weight: 500; }
+  .e1 { box-shadow: var(--elev-1); }
+  .e2 { box-shadow: var(--elev-2); }
+  .e3 { box-shadow: var(--elev-3); }
+  .e4 { box-shadow: var(--elev-4); }
+  .e5 { box-shadow: var(--elev-5); }
+  .ev { box-shadow: var(--elev-love); }
+</style></head>
+<body><div class="card">
+  <div class="label-tag" style="color:var(--fg-2)">Elevation · soft layered shadows</div>
+  <div class="row-e">
+    <div class="box e1"><span class="tok">elev-1</span><span class="desc">cards · resting</span></div>
+    <div class="box e2"><span class="tok">elev-2</span><span class="desc">hover · raised</span></div>
+    <div class="box e3"><span class="tok">elev-3</span><span class="desc">FABs · menus</span></div>
+    <div class="box e4"><span class="tok">elev-4</span><span class="desc">nav bar · drawer</span></div>
+    <div class="box e5"><span class="tok">elev-5</span><span class="desc">modal · dialog</span></div>
+    <div class="box ev"><span class="tok">elev-love</span><span class="desc">match · hero CTA</span></div>
+  </div>
+</div></body></html>

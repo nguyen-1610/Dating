@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <title>UniDate · App Showcase</title>
+  <meta name="viewport" content="width=1280, initial-scale=1">
+  <link rel="stylesheet" href="../../colors_and_type.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,300..700,0..1&display=block">
+  <style>
+    .msr {
+      font-family: 'Material Symbols Rounded' !important;
+      line-height: 1; display: inline-block;
+      font-feature-settings: 'liga';
+      -webkit-font-feature-settings: 'liga';
+    }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-body);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(214, 51, 108, 0.10), transparent 50%),
+        radial-gradient(circle at 90% 100%, rgba(139, 92, 246, 0.10), transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05), transparent 60%),
+        var(--surface-dim);
+      min-height: 100vh;
+      width: 1400px;
+      margin: 0 auto;
+      padding: 64px 48px 80px;
+      box-sizing: border-box;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex; align-items: center; gap: 24px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--outline-variant);
+      margin-bottom: 40px;
+    }
+    .hero img { width: 96px; height: 96px; }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 64px;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin: 0;
+      background: linear-gradient(135deg, #d6336c 0%, #8b5cf6 60%, #3b82f6 100%);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+    }
+    .hero .tagline {
+      font-size: 18px; color: var(--fg-2);
+      margin-top: 8px; font-weight: 500;
+    }
+    .hero .stats {
+      display: flex; gap: 8px; margin-top: 12px;
+    }
+    .hero .stat {
+      padding: 6px 12px; border-radius: 999px;
+      background: var(--surface); border: 1px solid var(--outline-variant);
+      font-size: 12px; font-weight: 700; color: var(--fg-2);
+    }
+    .hero .stat strong { color: var(--primary); margin-right: 5px; }
+
+    /* Section header */
+    .section-h {
+      display: flex; align-items: baseline; gap: 12px;
+      margin: 32px 0 20px;
+    }
+    .section-h .num {
+      font-family: var(--font-mono);
+      font-size: 12px; font-weight: 700;
+      color: var(--fg-4); letter-spacing: 0.06em;
+    }
+    .section-h h2 {
+      font-family: var(--font-display);
+      font-size: 26px; font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--fg-1); margin: 0;
+    }
+    .section-h .sub {
+      flex: 1; font-size: 13px; color: var(--fg-3); font-weight: 500;
+    }
+    .section-h .modes {
+      display: flex; gap: 6px;
+      font-size: 11px; font-weight: 700; color: var(--fg-3);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .section-h .modes .pill {
+      padding: 3px 8px; border-radius: 999px;
+      background: var(--surface-container); color: var(--fg-2);
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px 32px;
+    }
+    .cell {
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .cell .label {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--font-body);
+      font-size: 13px; font-weight: 700;
+      color: var(--fg-1); letter-spacing: -0.005em;
+    }
+    .cell .label .n {
+      font-family: var(--font-mono);
+      font-size: 11px; font-weight: 700;
+      color: var(--fg-4); letter-spacing: 0.06em;
+    }
+    .cell .label .desc {
+      flex: 1; font-weight: 500; color: var(--fg-3); font-size: 11.5px;
+    }
+    .pair {
+      display: flex; gap: 10px;
+    }
+    /* Phone tile (the framed scaled screen) */
+    .phone {
+      width: 162px; height: 351px;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--outline-variant);
+      box-shadow: 0 8px 24px rgba(20, 20, 26, 0.08), 0 2px 6px rgba(20, 20, 26, 0.05);
+      position: relative;
+      flex: 0 0 162px;
+    }
+    .phone .scale {
+      transform: scale(0.4154);
+      transform-origin: top left;
+      width: 390px;
+      height: 845px;
+      position: relative;
+    }
+    .phone .mode-pill {
+      position: absolute; top: 6px; right: 6px;
+      padding: 2px 7px; border-radius: 999px;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 9px; font-weight: 800;
+      letter-spacing: 0.08em;
+      z-index: 100;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--outline-variant);
+      font-size: 12px; color: var(--fg-3);
+      line-height: 1.6;
+      display: flex; gap: 32px;
+    }
+    footer .col { flex: 1; }
+    footer .col h4 {
+      font-size: 11px; font-weight: 700; color: var(--fg-2);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin: 0 0 8px;
+    }
+  </style>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="hero">
+    <img src="../../assets/logo-mark.svg" alt="UniDate">
+    <div style="flex:1">
+      <div style="display:flex;align-items:center;gap:14px">
+        <h1>UniDate</h1>
+        <span style="
+          padding: 6px 14px; border-radius: 999px;
+          background: linear-gradient(135deg, #d6336c 0%, #8b5cf6 100%);
+          color: #fff;
+          font-family: var(--font-mono); font-size: 11px; font-weight: 800;
+          letter-spacing: 0.08em;
+          align-self: flex-start; margin-top: 18px;
+        ">v0.4 · MAY 2026</span>
+      </div>
+      <div class="tagline">Yêu ở giảng đường — design system showcase</div>
+      <div class="stats">
+        <span class="stat"><strong>20</strong>screens</span>
+        <span class="stat"><strong>2</strong>themes</span>
+        <span class="stat"><strong>3</strong>brand palettes</span>
+        <span class="stat"><strong>4pt</strong>grid</span>
+        <span class="stat"><strong>M3</strong>foundations</span>
+      </div>
+    </div>
+    <div style="
+      align-self: flex-start;
+      padding: 10px 14px;
+      background: var(--surface);
+      border: 1px solid var(--outline-variant);
+      border-radius: 14px;
+      font-size: 11px; color: var(--fg-3);
+      line-height: 1.5; max-width: 220px;
+    ">
+      <strong style="color:var(--fg-1);font-size:11.5px">Handoff sheet</strong><br/>
+      All screens · both themes · render-faithful. Screenshot full page → share with team.
+    </div>
+  </header>
+
+  <div id="root"></div>
+
+  <footer>
+    <div class="col">
+      <h4>Primary</h4>
+      Love · #D6336C — magenta-rose, the dating heart.<br/>
+      Spark · #8B5CF6 — playful purple energy.<br/>
+      Campus · #3B82F6 — academic / verification blue.
+    </div>
+    <div class="col">
+      <h4>Type</h4>
+      Display: Bricolage Grotesque<br/>
+      Body: Be Vietnam Pro (Vietnamese diacritic optimized)<br/>
+      Mono: JetBrains Mono
+    </div>
+    <div class="col">
+      <h4>Mobile target</h4>
+      390 × 844 (iPhone 14/15 baseline)<br/>
+      Flutter app · Web + iOS + Android<br/>
+      Light + Dark first-class
+    </div>
+    <div class="col">
+      <h4>This sheet</h4>
+      All 15 screens, both themes. Render-faithful — not screenshots.<br/>
+      Take a screen capture and share with the team.
+    </div>
+  </footer>
+
+  <script type="text/babel" src="ios-frame.jsx"></script>
+  <script type="text/babel" src="components.jsx"></script>
+  <script type="text/babel" src="screens/Discover.jsx"></script>
+  <script type="text/babel" src="screens/MatchModal.jsx"></script>
+  <script type="text/babel" src="screens/Chat.jsx"></script>
+  <script type="text/babel" src="screens/Matches.jsx"></script>
+  <script type="text/babel" src="screens/Feed.jsx"></script>
+  <script type="text/babel" src="screens/Events.jsx"></script>
+  <script type="text/babel" src="screens/Profile.jsx"></script>
+  <script type="text/babel" src="screens/Onboarding.jsx"></script>
+  <script type="text/babel" src="screens/Notifications.jsx"></script>
+  <script type="text/babel" src="screens/FilterSheet.jsx"></script>
+  <script type="text/babel" src="screens/EmptyStates.jsx"></script>
+  <script type="text/babel" src="screens/Settings.jsx"></script>
+  <script type="text/babel" src="screens/StoryViewer.jsx"></script>
+  <script type="text/babel" src="screens/ProfileEdit.jsx"></script>
+  <script type="text/babel" src="screens/OnboardingSplash.jsx"></script>
+  <script type="text/babel" src="screens/BoostSheet.jsx"></script>
+
+  <script type="text/babel" data-presets="react">
+    // Phone tile that scales any screen down. Theme is applied via data-theme on a wrapper.
+    function Phone({ children, theme, showNav = true, activeTab = 'discover', extras }) {
+      return (
+        <div className="phone">
+          <div className="mode-pill">{theme === 'dark' ? 'DARK' : 'LIGHT'}</div>
+          <div data-theme={theme === 'dark' ? 'dark' : null}
+               style={{ width: 162, height: 351, overflow: 'hidden', background: 'var(--surface)' }}>
+            <div className="scale">
+              <div style={{ position: 'relative', width: 390, height: 844, overflow: 'hidden', background: 'var(--surface)' }}>
+                {children}
+                {showNav && (
+                  <BottomNav active={activeTab} badges={{ matches: true }}/>
+                )}
+                {extras}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function Cell({ n, label, desc, light, dark }) {
+      return (
+        <div className="cell">
+          <div className="label">
+            <span className="n">{n}</span>
+            {label}
+            {desc && <span className="desc">— {desc}</span>}
+          </div>
+          <div className="pair">
+            {light}
+            {dark}
+          </div>
+        </div>
+      );
+    }
+
+    function Sec({ num, title, sub, children }) {
+      return (
+        <>
+          <div className="section-h">
+            <span className="num">{num}</span>
+            <h2>{title}</h2>
+            <span className="sub">{sub}</span>
+            <span className="modes">
+              <span className="pill">Light</span>
+              <span className="pill">Dark</span>
+            </span>
+          </div>
+          <div className="grid">{children}</div>
+        </>
+      );
+    }
+
+    function ScreenPair({ render, activeTab = 'discover', showNav = true, extras = null }) {
+      // render is a () => JSX function so each theme gets its own instance
+      return [
+        <Phone key="l" theme="light" activeTab={activeTab} showNav={showNav} extras={extras}>{render()}</Phone>,
+        <Phone key="d" theme="dark"  activeTab={activeTab} showNav={showNav} extras={extras}>{render()}</Phone>,
+      ];
+    }
+
+    function App() {
+      // Bake the match modal once for Discover demo
+      const matchExtras = (
+        <MatchModal profile={DECK[1]} onMessage={() => {}} onDismiss={() => {}}/>
+      );
+
+      return (
+        <main>
+          <Sec num="01 · CORE" title="Khám phá & match" sub="The dating loop: swipe → match celebration → chat.">
+            <Cell n="1.1" label="Discover" desc="Swipe deck"
+              {...{
+                light: <Phone theme="light" activeTab="discover"><DiscoverScreen onMatch={()=>{}}/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="discover"><DiscoverScreen onMatch={()=>{}}/></Phone>,
+              }}/>
+            <Cell n="1.2" label="Match modal" desc="Celebration with confetti"
+              {...{
+                light: <Phone theme="light" activeTab="discover" extras={matchExtras}><DiscoverScreen onMatch={()=>{}}/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="discover" extras={matchExtras}><DiscoverScreen onMatch={()=>{}}/></Phone>,
+              }}/>
+            <Cell n="1.3" label="Boost upsell" desc="Tiered pricing · purple halo"
+              {...{
+                light: <Phone theme="light" activeTab="discover" extras={<BoostSheet open={true} onClose={()=>{}}/>}><DiscoverScreen onMatch={()=>{}}/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="discover" extras={<BoostSheet open={true} onClose={()=>{}}/>}><DiscoverScreen onMatch={()=>{}}/></Phone>,
+              }}/>
+            <Cell n="1.4" label="Matches list" desc="New matches + chats"
+              {...{
+                light: <Phone theme="light" activeTab="matches"><MatchesScreen/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="matches"><MatchesScreen/></Phone>,
+              }}/>
+            <Cell n="1.5" label="Chat" desc="Text + photo bubbles"
+              {...{
+                light: <Phone theme="light" showNav={false}><ChatScreen/></Phone>,
+                dark:  <Phone theme="dark"  showNav={false}><ChatScreen/></Phone>,
+              }}/>
+            <Cell n="1.6" label="Filter sheet" desc="Bottom sheet · M3 sliders"
+              {...{
+                light: <Phone theme="light" activeTab="discover" extras={<FilterSheet open={true} onClose={()=>{}} onApply={()=>{}}/>}><DiscoverScreen onMatch={()=>{}}/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="discover" extras={<FilterSheet open={true} onClose={()=>{}} onApply={()=>{}}/>}><DiscoverScreen onMatch={()=>{}}/></Phone>,
+              }}/>
+            <Cell n="1.7" label="Notifications" desc="Activity inbox"
+              {...{
+                light: <Phone theme="light" showNav={false}><NotificationsScreen/></Phone>,
+                dark:  <Phone theme="dark"  showNav={false}><NotificationsScreen/></Phone>,
+              }}/>
+          </Sec>
+
+          <Sec num="02 · SOCIAL" title="Cộng đồng sinh viên" sub="Threads-style feed, stories, campus events.">
+            <Cell n="2.1" label="Social feed" desc="Posts + stories"
+              {...{
+                light: <Phone theme="light" activeTab="feed"><FeedScreen/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="feed"><FeedScreen/></Phone>,
+              }}/>
+            <Cell n="2.2" label="Story viewer" desc="Full-screen, 24h countdown"
+              {...{
+                light: <Phone theme="light" showNav={false}><StoryViewer/></Phone>,
+                dark:  <Phone theme="dark"  showNav={false}><StoryViewer/></Phone>,
+              }}/>
+            <Cell n="2.3" label="Events list" desc="Discover campus events"
+              {...{
+                light: <Phone theme="light" activeTab="events"><EventListScreen onOpen={()=>{}}/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="events"><EventListScreen onOpen={()=>{}}/></Phone>,
+              }}/>
+            <Cell n="2.4" label="Event detail" desc="GPS check-in + attendees"
+              {...{
+                light: <Phone theme="light" showNav={false}><EventDetailScreen/></Phone>,
+                dark:  <Phone theme="dark"  showNav={false}><EventDetailScreen/></Phone>,
+              }}/>
+          </Sec>
+
+          <Sec num="03 · PROFILE" title="Hồ sơ & cài đặt" sub="Identity, customization, and account.">
+            <Cell n="3.1" label="Splash · intro" desc="Brand-first entry"
+              {...{
+                light: <Phone theme="light" showNav={false}><OnboardingSplash/></Phone>,
+                dark:  <Phone theme="dark"  showNav={false}><OnboardingSplash/></Phone>,
+              }}/>
+            <Cell n="3.2" label="Onboarding" desc="5-step wizard"
+              {...{
+                light: <Phone theme="light" showNav={false}><OnboardingScreen/></Phone>,
+                dark:  <Phone theme="dark"  showNav={false}><OnboardingScreen/></Phone>,
+              }}/>
+            <Cell n="3.3" label="Profile view" desc="Photos, bio, prompts"
+              {...{
+                light: <Phone theme="light" activeTab="profile"><ProfileScreen/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="profile"><ProfileScreen/></Phone>,
+              }}/>
+            <Cell n="3.4" label="Profile edit" desc="Drag photos, edit bio"
+              {...{
+                light: <Phone theme="light" showNav={false}><ProfileEditScreen/></Phone>,
+                dark:  <Phone theme="dark"  showNav={false}><ProfileEditScreen/></Phone>,
+              }}/>
+            <Cell n="3.5" label="Settings" desc="Account, notif, language"
+              {...{
+                light: <Phone theme="light" showNav={false}><SettingsScreen/></Phone>,
+                dark:  <Phone theme="dark"  showNav={false}><SettingsScreen/></Phone>,
+              }}/>
+          </Sec>
+
+          <Sec num="04 · STATES" title="Trạng thái rỗng" sub="Encourage action when there's nothing to show.">
+            <Cell n="4.1" label="No more profiles" desc="Discover · sold out"
+              {...{
+                light: <Phone theme="light" activeTab="discover"><EmptyState kind="no-profiles"/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="discover"><EmptyState kind="no-profiles"/></Phone>,
+              }}/>
+            <Cell n="4.2" label="No matches" desc="Matches tab · empty"
+              {...{
+                light: <Phone theme="light" activeTab="matches"><EmptyState kind="no-matches"/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="matches"><EmptyState kind="no-matches"/></Phone>,
+              }}/>
+            <Cell n="4.3" label="No messages" desc="Conversation · empty"
+              {...{
+                light: <Phone theme="light" activeTab="matches"><EmptyState kind="no-messages"/></Phone>,
+                dark:  <Phone theme="dark"  activeTab="matches"><EmptyState kind="no-messages"/></Phone>,
+              }}/>
+          </Sec>
+        </main>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+  </script>
+</body>
+</html>

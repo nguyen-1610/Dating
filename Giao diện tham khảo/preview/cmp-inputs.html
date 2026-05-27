@@ -1,0 +1,53 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  .field {
+    position: relative;
+    display: flex; flex-direction: column;
+    gap: 4px;
+  }
+  .field input, .field textarea {
+    font-family: var(--font-body); font-size: 16px;
+    padding: 16px 16px 16px 48px;
+    background: var(--surface-container-low);
+    border: 1.5px solid transparent;
+    border-radius: 16px;
+    outline: none;
+    width: 100%;
+    color: var(--fg-1);
+    transition: all .15s var(--ease-standard);
+  }
+  .field input::placeholder { color: var(--fg-3); }
+  .field.focused input { border-color: var(--primary); background: #fff; box-shadow: 0 0 0 4px rgba(214, 51, 108,.10); }
+  .field.error input { border-color: var(--error); }
+  .field .icon {
+    position: absolute; left: 16px; top: 14px;
+    font-family: 'Material Symbols Rounded'; font-size: 22px; color: var(--fg-3);
+  }
+  .field.focused .icon { color: var(--primary); }
+  .field .helper { font-size: 12px; color: var(--fg-3); padding-left: 4px; }
+  .field.error .helper { color: var(--error); }
+  .group { display: flex; flex-direction: column; gap: 14px; }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">Form inputs</div>
+  <div class="group">
+    <div class="field">
+      <span class="icon">person</span>
+      <input value="Nguyễn Minh Linh"/>
+      <span class="helper">Tên hiển thị · 8/30</span>
+    </div>
+    <div class="field focused">
+      <span class="icon">school</span>
+      <input value="hcmus" placeholder="HCMUS, BK, UEH…"/>
+      <span class="helper" style="color:var(--primary)">Trường đại học · Verified</span>
+    </div>
+    <div class="field error">
+      <span class="icon">mail</span>
+      <input value="linh@gmail.com"/>
+      <span class="helper">Cần email .edu.vn để xác thực sinh viên</span>
+    </div>
+  </div>
+</div></body></html>

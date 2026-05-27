@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  .btn {
+    font-family: var(--font-body); font-weight: 600; font-size: 14px;
+    padding: 10px 24px; border-radius: 999px; border: none; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px; height: 40px;
+    transition: all .15s var(--ease-standard);
+  }
+  .btn .icon { font-family: 'Material Symbols Rounded'; font-size: 18px; }
+  .filled { background: var(--primary); color: #fff; box-shadow: 0 1px 2px rgba(214, 51, 108,.25); }
+  .filled.grad { background: var(--grad-love); box-shadow: var(--elev-love); }
+  .tonal { background: var(--primary-container); color: var(--on-primary-container); }
+  .outlined { background: transparent; color: var(--primary); border: 1.5px solid var(--outline); }
+  .text-btn { background: transparent; color: var(--primary); padding: 10px 12px; }
+  .disabled { background: var(--surface-container-high); color: var(--fg-4); }
+  .filled.lg { height: 56px; padding: 16px 32px; font-size: 16px; border-radius: 999px; }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">Buttons · M3 variants</div>
+  <div class="row wrap">
+    <button class="btn filled"><span class="icon">favorite</span>Thích</button>
+    <button class="btn filled grad">Match ngay</button>
+    <button class="btn tonal">Tonal</button>
+    <button class="btn outlined">Outlined</button>
+    <button class="btn text-btn">Text only</button>
+    <button class="btn filled disabled">Disabled</button>
+  </div>
+  <div class="row wrap" style="margin-top:4px">
+    <button class="btn filled lg">Bắt đầu hẹn hò</button>
+    <button class="btn filled" style="background:var(--secondary)"><span class="icon">bolt</span>Boost</button>
+    <button class="btn filled" style="background:var(--tertiary)">Verify .edu.vn</button>
+  </div>
+</div></body></html>

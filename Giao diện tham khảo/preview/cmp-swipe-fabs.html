@@ -1,0 +1,44 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  body { background: linear-gradient(160deg, #fff 0%, #ffe6ee 100%); }
+  .fab {
+    border-radius: 50%; border: none; cursor: pointer; background: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 18px rgba(20,20,26,.10), 0 2px 4px rgba(20,20,26,.06);
+    transition: transform .2s var(--ease-bounce);
+  }
+  .fab:hover { transform: translateY(-3px) scale(1.04); }
+  .fab .icon { font-family: 'Material Symbols Rounded'; font-variation-settings: 'FILL' 1, 'wght' 500; }
+  .row-fab { display: flex; gap: 18px; align-items: center; justify-content: center; padding: 16px 0; }
+  .lbl { text-align: center; font-size: 11px; font-weight: 700; color: var(--fg-3); margin-top: 6px; letter-spacing:.05em; text-transform: uppercase; }
+  .stack { display: flex; flex-direction: column; align-items: center; }
+</style></head>
+<body><div class="card">
+  <div class="label-tag">Swipe action FABs</div>
+  <div class="row-fab">
+    <div class="stack">
+      <button class="fab" style="width:48px;height:48px;color:var(--warning)"><span class="icon" style="font-size:24px">replay</span></button>
+      <div class="lbl">Rewind</div>
+    </div>
+    <div class="stack">
+      <button class="fab" style="width:60px;height:60px;color:var(--neutral-40);background:#fff"><span class="icon" style="font-size:30px">close</span></button>
+      <div class="lbl">Pass</div>
+    </div>
+    <div class="stack">
+      <button class="fab" style="width:52px;height:52px;color:var(--superlike)"><span class="icon" style="font-size:26px">star</span></button>
+      <div class="lbl">Super-like</div>
+    </div>
+    <div class="stack">
+      <button class="fab" style="width:60px;height:60px;color:#fff;background:var(--grad-love);box-shadow:var(--elev-love)"><span class="icon" style="font-size:32px">favorite</span></button>
+      <div class="lbl">Like</div>
+    </div>
+    <div class="stack">
+      <button class="fab" style="width:52px;height:52px;color:var(--spark-60)"><span class="icon" style="font-size:26px">bolt</span></button>
+      <div class="lbl">Boost</div>
+    </div>
+  </div>
+  <div class="note">Sizes asymmetric on purpose — like is the hero, pass is secondary, rewind/super/boost are tertiary.</div>
+</div></body></html>

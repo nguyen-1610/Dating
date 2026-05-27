@@ -1,0 +1,78 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="stylesheet" href="_card.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+<style>
+  body { background: var(--neutral-96); }
+  .card-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 16px; }
+  .profile-card {
+    aspect-ratio: 3 / 4;
+    border-radius: 28px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--elev-3);
+  }
+  .p1 { background: linear-gradient(180deg, #c4b5fd 0%, #d6336c 100%); }
+  .p2 { background: linear-gradient(180deg, #93c5fd 0%, #8b5cf6 100%); }
+  .scrim {
+    position: absolute; left: 0; right: 0; bottom: 0; top: 50%;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,.75) 100%);
+  }
+  .body { position: absolute; left: 14px; right: 14px; bottom: 14px; color: #fff; }
+  .body .uni {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 3px 8px 3px 4px;
+    background: rgba(255,255,255,.18);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 999px;
+    font-size: 10px; font-weight: 700; letter-spacing: .02em;
+    margin-bottom: 8px;
+  }
+  .body .uni .glyph {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--tertiary); display: inline-flex; align-items: center; justify-content: center;
+    font-size: 7px; font-weight: 800;
+  }
+  .body .name {
+    font-family: var(--font-display); font-weight: 700;
+    font-size: 22px; line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .body .meta { font-size: 12px; opacity: .9; margin-top: 2px; }
+  .top-tag {
+    position: absolute; top: 12px; left: 12px;
+    padding: 4px 10px; border-radius: 999px;
+    background: rgba(0,0,0,.55);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    color: #fff; font-size: 10px; font-weight: 700;
+    letter-spacing: .04em;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .top-tag .icon { font-family: 'Material Symbols Rounded'; font-size: 12px; font-variation-settings:'FILL' 1; }
+  .super-tag { background: var(--superlike); color: #003a4a; }
+</style></head>
+<body>
+  <div class="card-row">
+    <div class="profile-card p1">
+      <div class="top-tag"><span class="icon">whatshot</span>BOOST · 4 phút</div>
+      <div class="scrim"></div>
+      <div class="body">
+        <span class="uni"><span class="glyph">HCMUS</span> Khoa học Máy tính · Năm 3</span>
+        <div class="name">Linh, 21</div>
+        <div class="meta">Cách bạn 1.2 km · Đang online</div>
+      </div>
+    </div>
+    <div class="profile-card p2">
+      <div class="top-tag super-tag"><span class="icon">star</span>SUPER-LIKE BẠN</div>
+      <div class="scrim"></div>
+      <div class="body">
+        <span class="uni"><span class="glyph">BK</span> Cơ điện tử · Năm 4</span>
+        <div class="name">Đăng, 22</div>
+        <div class="meta">Cách bạn 3.4 km · 2 bạn chung</div>
+      </div>
+    </div>
+  </div>
+</body></html>
