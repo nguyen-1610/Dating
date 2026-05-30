@@ -93,6 +93,47 @@ Nếu terminal hỏi `Terminate batch job (Y/N)?`, nhập:
 y
 ```
 
+### Chạy thư mục giao diện tham khảo
+
+Thư mục `Giao diện tham khảo/` là bộ HTML tĩnh, không cần `npm install`.
+
+Từ thư mục gốc project, chạy:
+
+```powershell
+cd "Giao diện tham khảo"
+python -m http.server 8001 --bind 127.0.0.1
+```
+
+Sau đó mở:
+
+```text
+http://127.0.0.1:8001/ui_kits/mobile/index.html
+```
+
+Trang admin:
+
+```text
+http://127.0.0.1:8001/ui_kits/admin/index.html
+```
+
+Tắt server: quay lại terminal đang chạy lệnh trên và nhấn:
+
+```text
+Ctrl + C
+```
+
+Nếu chạy server bằng `Start-Process` như Codex đã làm, kiểm tra process Python:
+
+```powershell
+Get-Process python
+```
+
+Tắt đúng process theo `Id`, ví dụ:
+
+```powershell
+Stop-Process -Id 17144
+```
+
 ## 4. Các lệnh Flutter thường dùng
 
 Tải package:
@@ -359,46 +400,7 @@ Quy ước commit:
 - `chore: initialize flutter project`
 - `refactor(profile): split photo uploader`
 
-## 9. Phân chia công việc gợi ý
-
-Dev 1:
-
-- Auth
-- Onboarding
-- Profile
-
-Dev 2:
-
-- Discover
-- Swipe
-- Matches
-- Chat
-
-Dev 3:
-
-- Feed
-- Events
-- Notifications
-- Supabase migrations
-
-Dev 4:
-
-- Admin
-- Settings
-- Theme
-- CI/CD
-- Testing
-
-Các file dễ conflict:
-
-- `pubspec.yaml`
-- `pubspec.lock`
-- `lib/router/*`
-- file generated nếu dùng build runner
-
-Khi thêm package mới, báo team trước để tránh nhiều người sửa `pubspec.yaml` cùng lúc.
-
-## 10. Lộ trình setup tiếp theo
+## 9. Lộ trình setup tiếp theo
 
 1. Cập nhật `pubspec.yaml` theo stack thật: Supabase, Riverpod, GoRouter, Freezed.
 2. Tạo `.env.example`.
@@ -408,7 +410,7 @@ Khi thêm package mới, báo team trước để tránh nhiều người sửa 
 6. Kết nối Supabase Auth.
 7. Làm luồng đăng ký, đăng nhập, onboarding.
 
-## 11. Troubleshooting
+## 10. Troubleshooting
 
 ### Flutter không nhận lệnh
 
@@ -465,7 +467,7 @@ Cài lại CLI:
 npm install -g supabase
 ```
 
-## 12. Ghi chú bảo mật
+## 11. Ghi chú bảo mật
 
 - Không commit `.env.json`
 - Không đưa service role key vào Flutter
@@ -474,7 +476,7 @@ npm install -g supabase
 - Storage policy phải giới hạn user chỉ sửa file của chính mình
 - Moderator không được đọc tin nhắn riêng tư trừ phần được report
 
-## 13. Trạng thái hiện tại
+## 12. Trạng thái hiện tại
 
 - Flutter project đã được khởi tạo.
 - App hiện vẫn là Flutter counter app mặc định.

@@ -12,6 +12,8 @@
 
 ---
 
+*Performed by: Huỳnh Duy Nguyên · Reviewed by: Trần Thuận Khang · Edited by: Trần Thuận Khang*
+
 ## 1. Introduction
 
 UniDate is a mobile and web platform that combines dating, a lightweight social feed, and student event discovery into a single application designed for Vietnamese university students. Unlike mainstream dating apps such as Tinder or Bumble, which target the general adult population and gate core features behind paywalls, UniDate is built around Vietnamese campus life: students can filter matches by university, discover student-organized events with GPS check-in, and engage with peers through a feed similar to Threads.
@@ -20,11 +22,11 @@ The platform addresses three pain points that existing apps fail to solve for Vi
 
 The product targets approximately 2.1 million university students across Vietnam, with an initial launch focused on Ho Chi Minh City universities (HCMUS, UEH, BK, FTU) before nationwide expansion.
 
+UniDate is designed to follow Vietnamese laws, international regulations, and common ethical standards. The platform does not support illegal content, gambling, harassment, hate speech, or any activity that may harm users.
+
 ---
 
 ## 2. Target Users and Environments
-
-*Performed by: [name] · Reviewed by: [name] · Edited by: [name]*
 
 UniDate has three types of users. **Students** aged 18–25 are the main users (about 99%); they swipe, chat, post, and join events. **Moderators** review reports, manage banned words, and can suspend accounts temporarily; they cannot read private messages unless those messages are part of a report. **Admins** have full access for user management, moderator assignment, and system configuration. Two-factor authentication is required for admin accounts.
 
@@ -38,23 +40,23 @@ UniDate has 10 functional groups. The first four are common to most apps but ada
 
 **1. Authentication and Onboarding.** Students sign up with email or Google, agree to the terms, and complete a 5-step onboarding wizard (name, birthday, gender, university, photos). This makes sure every profile has the basic information needed for matching.
 
-**2. Profile Management.** Each student can edit their profile, upload up to 6 photos, choose interests from a tag pool, and add social media links. Photos are compressed before upload to keep storage costs low.
+**2. Profile Management.** Each student can edit their profile, upload up to 6 photos, choose interests from a tag pool, and add social media links. A complete profile helps other students understand who they are and increases the chance of meaningful matches. Photos are compressed before upload to keep storage costs low and improve loading performance.
 
 **3. Discover and Swipe.** Students swipe left to pass and right to like. They can filter by **university**, age, distance, and shared interests — the university filter is unique to UniDate and lets students choose to meet people from their own school or other schools.
 
 **4. Matches and Likes.** When two users like each other, a match is created and a chat opens. Students can also see who liked them for free (most apps charge for this), undo their last swipe, and check their swipe history.
 
-**5. Chat.** Matched users can send text, emoji, and images in real time, with typing indicator and seen status. A banned-word filter warns users before they send inappropriate messages.
+**5. Chat.** Matched users can send text, emoji, and images in real time, with typing indicator and seen status. A banned-word filter warns users before they send inappropriate messages. This allows students to communicate safely inside the app without immediately sharing phone numbers or social media accounts.
 
-**6. Social Feed.** Students can post photos with captions, share 24-hour stories, and write short threads. Other users can like, comment, and report posts.
+**6. Social Feed.** Students can post photos with captions, share 24-hour stories, and write short threads. Other users can like, comment, and report posts. This helps students interact more naturally and makes UniDate feel like a campus social community instead of only a dating app.
 
 **7. Events.** Students can create and join campus events such as study groups, club meetings, or group dates. Each event has a location on a map, a list of attendees, and a group chat. When the event starts, attendees check in using GPS, and a special "event swipe" mode lets them match only with people physically present at the event.
 
-**8. Notifications.** Push notifications are sent for matches, new messages, comments, event reminders, and likes. Students can turn each type on or off in settings.
+**8. Notifications.** Push notifications are sent for matches, new messages, comments, event reminders, and likes. Students can turn each type on or off in settings. This helps students stay updated on important interactions without being overwhelmed by unnecessary alerts.
 
-**9. Safety and Moderation.** Users can block, report, or unmatch other users. Moderators review reports and remove harmful content. A banned-word list filters offensive messages and posts.
+**9. Safety and Moderation.** Users can block, report, or unmatch other users. Moderators review reports and remove harmful content. A banned-word list filters offensive messages and posts. These tools help protect students from harassment, spam, and unsafe interactions.
 
-**10. Admin and Analytics.** Admins see dashboards for daily active users, matches, and reports. They can manage users, assign moderators, schedule ads, and view audit logs of all moderator actions.
+**10. Admin and Analytics.** Admins see dashboards for daily active users, matches, and reports. They can manage users, assign moderators, schedule ads, and view audit logs of all moderator actions. This helps the team operate the platform safely, monitor community health, and respond quickly to moderation issues.
 
 ---
 
@@ -65,3 +67,4 @@ UniDate includes an **AI Ice-breaker** to help students start conversations afte
 This feature solves a real problem in dating apps: many matches go nowhere because users don't know what to say first. Generic openers like "hi" rarely get replies, but writing something personal takes effort and confidence that not everyone has. By suggesting messages that reference what the two users actually share, the AI lowers this barrier and helps shy students start real conversations.
 
 The feature works by sending both profiles to a language model API (OpenAI GPT-4o-mini or Google Gemini Flash) with a prompt that asks for three short, friendly, Vietnamese-language openers. The AI runs only when the user opens the chat for the first time, and the suggestions appear as tappable chips above the text input — users can send a suggestion directly, edit it, or ignore it and type their own message. No conversation data is sent to the AI; only the two public profiles are used.
+
